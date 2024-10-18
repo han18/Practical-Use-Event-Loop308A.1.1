@@ -35,8 +35,20 @@ function flattenArray(inputArray) {
 
 }
 
-// creating the recursion function to accomplishe the above task
+// creating the recursion function to accomplish the above task
 function recursion(index, inputArray, outputArray ) {
+    // checking its condition
 
+    if (index >= inputArray.length) return;
+    if (Array.isArray(inputArray[index])) {
+        recursion(0, inputArray[index], outputArray);
+    } else {
+        outputArray.push(inputArray[index]);
+    }
 
+    recursion(index + 1, inputArray, outputArray);
 }
+
+//creating the array 
+let flatArray = flattenArray([1, 2, [3, [4, 5] ], 6]);
+console.log(flatArray)
