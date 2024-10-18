@@ -77,6 +77,9 @@ console.log(flatArray)
 
 
 // Part 3: Deferred Execution
+// another way to avoid stack overflow is using a setTimeout place tasks into the event queue
+
+
 
 
 
