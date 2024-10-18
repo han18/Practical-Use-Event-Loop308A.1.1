@@ -25,3 +25,18 @@ incrementVar()
 // Write a recursive function that completely flattens an array of nested arrays, regardless of how deeply nested the arrays are.
 // Once your recursive function is complete, trampoline it.
 
+// technicaly practicing tht event loop using array as an example
+
+function flattenArray(inputArray) {
+    // we are pushing the new flatten array here
+    let outputArray = []; 
+    recursion(0, inputArray, outputArray)
+    return outputArray;  
+
+}
+
+// creating the recursion function to accomplishe the above task
+function recursion(index, inputArray, outputArray ) {
+
+
+}
