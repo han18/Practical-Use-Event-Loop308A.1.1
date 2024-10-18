@@ -79,8 +79,25 @@ console.log(flatArray)
 // Part 3: Deferred Execution
 // another way to avoid stack overflow is using a setTimeout place tasks into the event queue
 
+// Create a simple HTML element to hold text. Cache this HTML element into a JavaScript variable.
+// Write a function that takes a parameter n and adds a list of all prime numbers between one and n to your HTML element.
+// Once complete, use the alert() method to alert the user that the calculation is finished.
+
+const textElement = document.querySelector('.text')
+console.log(textElement, 'testing...')
+
+function PrimeNumber(n) {
+
+    for(let i = 1; i <= n.length; i++){
+        if(n % 1 === 0) {
+            return[i]
+        }
+    }
+   
+}
 
 
 
 
-// https://www.freecodecamp.org/news/flatten-array-recursion/
+
+// https://www.freecodecamp.org/news/flatten-array-recursion/ 
