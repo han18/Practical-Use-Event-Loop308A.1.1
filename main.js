@@ -22,10 +22,28 @@ try {
 
 incrementVar()
 
+// Part 2: Trampolines
+    // using a trampoline to solve the stock overflow instead of a try and catch
+
 // Write a recursive function that completely flattens an array of nested arrays, regardless of how deeply nested the arrays are.
 // Once your recursive function is complete, trampoline it.
 
-// technicaly practicing tht event loop using array as an example
+// technicaly practicing the event loop using array as an example
+
+function flattenArray(inputArray) {
+    // pushing the new flattened array here
+    let outputArray = []; 
+    return trampoline(() => recursion(0, inputArray, outputArray));
+}
+
+// Trampoline function to handle recursive calls
+function trampoline(fn) {
+    while (typeof fn === 'function') {
+        fn = fn();
+    }
+    return fn;
+}
+
 
 function flattenArray(inputArray) {
     // we are pushing the new flatten array here
@@ -52,3 +70,14 @@ function recursion(index, inputArray, outputArray ) {
 //creating the array 
 let flatArray = flattenArray([1, 2, [3, [4, 5] ], 6]);
 console.log(flatArray)
+
+
+
+
+
+
+// Part 3: Deferred Execution
+
+
+
+// https://www.freecodecamp.org/news/flatten-array-recursion/
